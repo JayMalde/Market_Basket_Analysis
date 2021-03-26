@@ -1,0 +1,47 @@
+<h1>Market Basket analysis</h1>
+
+Unique  Items count: {{ itemset_count }}<br/>
+Association Rules count: {{ rules_count }}
+
+<h2>Basket</h2>
+
+<ul>
+{% for item in basket %}
+    <li>{{ item }}</li>
+{% endfor %}
+</ul>
+
+<form method="post" action="/reset-basket/">
+    <button type="submit">Reset basket</button>
+</form>
+
+<h2>Recommendations</h2>
+
+<form method="post">
+    <ul>
+    {% for item in recommendations %}
+        <li>
+            <input type="checkbox" id="item-{{ item }}" name="items" value="{{ item }}" />
+            <label for="items">{{ item }}</label>
+        </li>
+    {% endfor %}
+    </ul>
+    {% if recommendations %}
+    <button type="submit">Add to basket</button>
+    {% endif %}
+</form>
+
+
+<h2>Items available</h2>
+
+<form method="post">
+    <button type="submit">Add to basket</button>
+    <ol>
+    {% for item in items %}
+        <li>
+            <input type="checkbox" id="item-{{ item }}" name="items" value="{{ item }}" />
+            <label for="items">{{ item }}</label>
+        </li>
+    {% endfor %}
+    </ol>
+</form>
