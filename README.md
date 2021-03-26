@@ -6,4 +6,4 @@
 * It predicts and recommends the products based on the products in cart/basket.  
 
 ## Video Demonstration
-[![GIF](Market.gif)](https://github.com/JayMalde/Masket_Basket_Analysis "GIF")
+[![GIF](Market.gif)](https://github.com/JayMalde/Market_Basket_Analysis "GIF")
